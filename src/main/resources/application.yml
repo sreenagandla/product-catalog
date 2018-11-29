@@ -4,8 +4,17 @@ server:
 info:
   appName: product-catalog
 
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost:9092/mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      show-details: "ALWAYS"
