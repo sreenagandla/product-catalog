@@ -1,10 +1,6 @@
 pipeline {
     agent any
-    tools {
-        gradle 'Gradle5'
-    }
- 
- 	stages {
+    stages {
     	stage('Build') 	{
 			steps {
         		sh './gradlew -b build.gradle clean build'
