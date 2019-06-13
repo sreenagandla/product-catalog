@@ -1,5 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
+metadata:
+  name: productak
 spec:
   replicas: 1
   template:
@@ -8,7 +10,7 @@ spec:
         app: productak
     spec:
       containers:
-      - name: sample-k8s-app-container
+      - name: productak
         image: akmaharshi.azurecr.io/akmaharshi/product-catalog-image:$BUILD_NUMBER
         ports:
         - containerPort: 8080
