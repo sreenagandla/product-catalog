@@ -11,8 +11,8 @@ spec:
     spec:
       containers:
       - name: productak
-        image: akmaharshi.azurecr.io/akmaharshi/product-catalog-image:$BUILD_NUMBER
+        image: akmaharshi.azurecr.io/akmaharshi/product-catalog-image:v9
         ports:
-        - containerPort: 8080
+        - containerPort: 8282
       imagePullSecrets:
       - name: $KUBERNETES_SECRET_NAME
