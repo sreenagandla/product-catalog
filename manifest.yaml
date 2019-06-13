@@ -1,18 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: productak
+  name: product-deployment
+  labels:
+    app: product
 spec:
-  replicas: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      app: product
   template:
     metadata:
       labels:
-        app: productak
+        app: product
     spec:
       containers:
-      - name: productak
+      - name: product
         image: akmaharshi.azurecr.io/akmaharshi/product-catalog-image:v9
         ports:
         - containerPort: 8282
-      imagePullSecrets:
-      - name: $KUBERNETES_SECRET_NAME
