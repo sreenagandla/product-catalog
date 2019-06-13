@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       labels:
-        app: sample-k8s-app
+        app: productak
     spec:
       containers:
       - name: sample-k8s-app-container
