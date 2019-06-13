@@ -1,7 +1,5 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  name: sample-k8s-deployment
 spec:
   replicas: 1
   template:
