@@ -20,7 +20,7 @@ pipeline {
                 }
             }
         }
-        stage('Build Image') {
+        /*stage('Build Image') {
             steps {
                 sh '''
                     docker build --no-cache -t product-catalog-image:latest .
@@ -37,7 +37,7 @@ pipeline {
                 '''
             }
         }
-    }
+    }*/
 
     post {
         always {
