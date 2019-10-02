@@ -36,8 +36,8 @@ pipeline {
                     docker push akmaharshi/product-catalog-image:v${BUILD_NUMBER}
                 '''
             }
-        }
-    }*/
+        }*/
+    }
 
     post {
         always {
